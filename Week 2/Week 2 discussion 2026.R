@@ -217,28 +217,35 @@ print(a2)
 
 
 
-# jitter points
+# add alpha() argument to change transparency
+a3 <- a1 +
+  geom_point(alpha = 0.2)
+
+print(a3)
+# darker points = more overlaps
+
+
+## jitter points -----------
 # shift points a little bit because we have repeated observation for
 # liking scores and familiarity scores
-a3 <- a1 +
+a4 <- a1 +
   geom_jitter()
 
-print(a3) # looks way better!
+print(a4) # looks way better!
 
 
-# add labels
-a4 <- a3 +
+## add labels -----------
+a5 <- a4 +
   labs(x = "Liking Score",
        y =  "Flavor Familiarity",
        title = "Cereal: Liking vs. Familiarity")
 
-print(a4)
+print(a5)
 
 
 
 
-
-## advanced scatter plot --------------
+## change theme and point color --------------
 
 # scatter plot with colors and different theme
 b1 <- cereal_long_formatted |>
