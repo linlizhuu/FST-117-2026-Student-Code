@@ -83,9 +83,9 @@ cereal_long_formatted <- cereal_long |>
                 as.factor),
          # set any cols ends with Frequency as factor
          
-         across(c(Sample_Position, Liking, Sweetness, Familiarity, Healthiness),
+         across(c(Liking, Sweetness, Familiarity, Healthiness),
                 as.numeric))
-         # set Sample_Position, Liking, Sweetness, Familiarity, Healthiness as numeric
+         # set Liking, Sweetness, Familiarity, Healthiness as numeric
 
 
 # check structure again
