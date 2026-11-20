@@ -31,9 +31,9 @@ EBar.pca <- PCA(EBar.means, axes = c(1,2), ncp = 13, graph = TRUE)
 #print list of eigen values into console
 get_eigenvalue(EBar.pca)
 
-#Generate Scree Plot
-fviz_screeplot(EBar.pca, ncp = 19)
+#Generate Scree Plot (visualize eigen values)
+fviz_screeplot(EBar.pca)
 
 #Generate biplots
-fviz_pca_biplot(EBar.pca, axes = c(1,2), repel = TRUE) #pc2 vs. pc1
-fviz_pca_biplot(EBar.pca, axes = c(1,3), repel = TRUE) #pc3 vs. pc1
+fviz_pca_biplot(EBar.pca, axes = c(1,2), ncp = 13, repel = TRUE) #pc2 vs. pc1
+fviz_pca_biplot(EBar.pca, axes = c(1,3), ncp = 13, repel = TRUE) #pc3 vs. pc1
